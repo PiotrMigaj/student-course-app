@@ -7,8 +7,7 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-public
-class StudentServiceImpl {
+public class StudentServiceImpl {
 
     private final StudentRepository studentRepository;
 
@@ -16,18 +15,14 @@ class StudentServiceImpl {
         return studentRepository.findAll();
     }
 
-    public Student addStudent(Student student){
+    public Student createStudent(Student student){
         return studentRepository.save(student);
     }
 
-    Student getStudentById(Long id){
+    public Student getStudentById(Long id){
         return studentRepository
                 .findById(id)
                 .orElseThrow(()->new IllegalArgumentException("Student id does not exist: "+id));
-    }
-
-    Student createStudent(Student student){
-        return studentRepository.save(student);
     }
 
 }
