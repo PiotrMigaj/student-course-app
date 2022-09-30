@@ -13,10 +13,15 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-class Course {
+public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     String name;
     String department;
+
+    Course(String name, String department) {
+        this.name = name;
+        this.department = department;
+    }
 }

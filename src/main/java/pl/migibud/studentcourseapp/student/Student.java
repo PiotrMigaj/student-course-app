@@ -38,6 +38,13 @@ public class Student {
         this.studentIdCard.setStudent(this);
     }
 
+    Student(String firstName, String lastName, String email, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.age = age;
+    }
+
     public void setBooks(Set<Book> books) {
         this.books = books;
         books.forEach(book -> book.setStudent(this));

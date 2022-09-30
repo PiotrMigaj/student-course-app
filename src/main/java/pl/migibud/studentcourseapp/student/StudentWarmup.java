@@ -17,7 +17,7 @@ class StudentWarmup implements ApplicationListener<ContextRefreshedEvent> {
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
         if (studentService.getAllStudents().size()==0){
-            studentService.addStudent(Student.builder()
+            studentService.createStudent(Student.builder()
                     .firstName("Piotr")
                     .lastName("Migaj")
                     .age(30)
