@@ -18,17 +18,17 @@ public class StudentCourseAppApplication {
         SpringApplication.run(StudentCourseAppApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner run(StudentServiceImpl studentServiceImpl) {
-        return args -> {
-            studentServiceImpl.addStudent(Student.builder()
-                    .firstName("Piotr")
-                    .lastName("Migaj")
-                    .age(30)
-                    .email("pmigaj@gmail.com")
-                    .books(Set.of(new Book("Java, First Guide."), new Book("SQL Masterclass")))
-                    .studentIdCard(new StudentIdCard("AAE123"))
-                    .build());
-        };
-    }
+//    @Bean
+//    CommandLineRunner run(StudentServiceImpl studentServiceImpl) {
+//        return args -> {
+//            studentServiceImpl.addStudent(Student.builder()
+//                    .firstName("Piotr")
+//                    .lastName("Migaj")
+//                    .age(30)
+//                    .email("pmigaj@gmail.com")
+//                    .books(Set.of(new Book("Java, First Guide."), new Book("SQL Masterclass")))
+//                    .studentIdCard(new StudentIdCard("AAE123"))
+//                    .build());
+//        };
+//    }
 }

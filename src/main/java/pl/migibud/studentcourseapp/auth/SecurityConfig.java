@@ -1,4 +1,4 @@
-package pl.migibud.studentcourseapp.security;
+package pl.migibud.studentcourseapp.auth;
 
 
 import org.springframework.context.annotation.Bean;
@@ -10,7 +10,7 @@ import org.springframework.security.web.SecurityFilterChain;
 class SecurityConfig {
 
     @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
+    SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         return httpSecurity
                 .authorizeRequests()
                 .antMatchers("/api/student").authenticated()
