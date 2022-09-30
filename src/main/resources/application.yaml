@@ -9,6 +9,10 @@ spring:
       show-sql: true
       format_sql: true
       use_sql_comments: true
+  security:
+    user:
+      name: pmig
+      password: 123
 
 logging:
   level:

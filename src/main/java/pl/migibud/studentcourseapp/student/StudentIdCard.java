@@ -1,5 +1,6 @@
 package pl.migibud.studentcourseapp.student;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,6 +20,7 @@ public class StudentIdCard {
     String cardNumber;
     @OneToOne
     @JoinColumn(name = "student_id")
+            @JsonIgnore
     Student student;
 
     public StudentIdCard(String cardNumber) {

@@ -25,4 +25,9 @@ class StudentServiceImpl {
                 .findById(id)
                 .orElseThrow(()->new IllegalArgumentException("Student id does not exist: "+id));
     }
+
+    Student createStudent(Student student){
+        return studentRepository.save(student);
+    }
+
 }
